@@ -1,2 +1,8 @@
-#log files
+#not control files
 *.log
+*.opt
+*.ncb
+*.aps
+*.mak
+*.suo
+*.pdb
