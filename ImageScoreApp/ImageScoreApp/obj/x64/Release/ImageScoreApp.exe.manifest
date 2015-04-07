@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ImageScoreApp.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ImageScoreApp" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+    <commandLine file="ImageScoreApp.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC マニフェスト オプション
+          Windows のユーザー アカウント制御のレベルを変更するには、
+          requestedExecutionLevel ノードを以下のいずれかで置換します。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         下位互換性を保つためにファイルおよびレジストリの仮想化を使用する場合、
+         requestedExecutionLevel ノードを削除します。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ImageScoreApp.exe" size="32256">
+      <assemblyIdentity name="ImageScoreApp" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0O3ftxzbmfx+0VOBy5MGK+BL/eubthyMAplvaIgZSPE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OpenCvSharp.dll" size="496640">
+      <assemblyIdentity name="OpenCvSharp" version="1.0.0.0" publicKeyToken="6ADAD1E807FEA099" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>AaBcxtV6QKvXSJQ4o8s6Gkq330h/mTM2ol6wbL24tMc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OpenCvSharp.Blob.dll" size="40960">
+      <assemblyIdentity name="OpenCvSharp.Blob" version="1.0.0.0" publicKeyToken="6ADAD1E807FEA099" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0ru/DwrhsLMsf4FFEP8YsqIsEvYMOx+AmkC8FTfJWCo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OpenCvSharp.CPlusPlus.dll" size="689664">
+      <assemblyIdentity name="OpenCvSharp.CPlusPlus" version="1.0.0.0" publicKeyToken="6ADAD1E807FEA099" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LrJQj9ByqYB8WsCag5g+GFGlQZ7brbCk+5EcxMVkk1U=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OpenCvSharp.Extensions.dll" size="33280">
+      <assemblyIdentity name="OpenCvSharp.Extensions" version="1.0.0.0" publicKeyToken="6ADAD1E807FEA099" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>gn3XHrxpKZWby/0wW1eHeDaQsSUBgRY5BVQ/g66Svlg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OpenCvSharp.UserInterface.dll" size="13312">
+      <assemblyIdentity name="OpenCvSharp.UserInterface" version="1.0.0.0" publicKeyToken="6ADAD1E807FEA099" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>9YFcGFZYOpGRT3BR28iCnxt6wL0fSc/iFiWYrH1lfAA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="dll\x64\msvcp110.dll" size="661456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>J/OUrgHRL4UfHe42Mt7jxa+h0mf3qWMh01/UMQWwNa0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\msvcr110.dll" size="849360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rplu25sFBnfE+C1WCS79x18K3cl6FOLEZ1Pi2z9r1zI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_calib3d2410.dll" size="1238016">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>01KjbsmtepCqYBTHUYyr9aPHV3IDaIP/UFi4JruIpj0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_contrib2410.dll" size="1440768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>T88HV72tpyrT4qlikBMxA2tPzBmxtVzVib4m9jnaVyA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_core2410.dll" size="2615296">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4lTcEP7WryOlxbqJye1dp0omgpfPXY6qJrENlaocSXE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_features2d2410.dll" size="897024">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tWFcqFSlwt4dPXhTl4nFxT+5DPYYiXbC1NZScyAFVOc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_ffmpeg2410_64.dll" size="9720042">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3DItlED8FmfIWltRfUbGbj4EF6kHi9w2kxoqjV5jH5Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_flann2410.dll" size="645632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8ecIEO4AH2dfjY/Dg8RadDI1N534ySYiQnIfqIJWrR0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_gpu2410.dll" size="484864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Uq5AFw6lJimlTcKek3oAMR9AX6+uEjCTgvTo20hBO+Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_highgui2410.dll" size="2428416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ekOgwxmiDdbuFICGnMbmDRIsk53+vH2y7++RQK50eis=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_imgproc2410.dll" size="2294784">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vGAFcTMHQot65ercfxDaGYuh22uZan1vhGkU1hemPlk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_legacy2410.dll" size="1531392">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Tq0kKRP6Y0i0I4ZULVT7HlEV4ZvjrU5RC2lqEAIR8rs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_ml2410.dll" size="606720">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ivp4hyVoXQ6FqaPJgty1fegBWMS091vlDISqFzNGH+Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_nonfree2410.dll" size="665600">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xl88Lu2uvLiy/0pAUojG/ql0KdEpyGqyGIbxybuejdg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_objdetect2410.dll" size="839680">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+xRQdQju5G9hcBat4H3DWroaJcpxMmkEYSzZTX77Pu4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_ocl2410.dll" size="2993152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>T/0Q3cU5eGlfdyUtaGP3maGp4QM3CpFnIhnjHcWeqQI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_photo2410.dll" size="242176">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RXArUOhT3DaNF1wloS3Tl/PYwMpKIsFGHJJ3H1QLLd4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_stitching2410.dll" size="1263104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Zk9EqcvuCqAOL7kVapwwlS+wKIP2hfBdA1DpyAy5UZA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_superres2410.dll" size="724480">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Hbc82R5fsxxQaUw3LnJtLuWHXFxisvNtaVguDwH8WmI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_video2410.dll" size="449536">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6YXR+c9zKveSfRwcciIxSMbr6K7FZz6pIBqIV+bqUwI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\opencv_videostab2410.dll" size="646656">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3V+fe4meP5Q7tOqee8qTW6PuvPtRIv24K/bdKxmF2dU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x64\OpenCvSharpExtern.dll" size="1063424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mBO1+Ph0LbLJGOPSTMRGDzZmv+AiYQUSWs2gu1tzxtE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\msvcp110.dll" size="535008">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yNVXLKjXYkhxGI8Kyrw65g1MWk9ngtlSuQON47wos5o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\msvcr110.dll" size="875472">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>swFg51kRXiRCW5vN9gbvbrzkZXSHUl7efxrEC5D/fkk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_calib3d2410.dll" size="1012736">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>O8MscfXPKPUe97OwvFS/EO+wVJH3Tik0zAWEHjPvwHs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_contrib2410.dll" size="1214976">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8V6sUN4wLulZwaC8pGQcBfIU7PJEN67B55zr4r7sDwM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_core2410.dll" size="2150400">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eYTTfxS/RS0jQ3OLOJWBJFGODZS2Ql3UWkNg/iBmaGk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_features2d2410.dll" size="742400">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uBLvxJWxbNcuE6HEYyc4hYXybZCBCaGQAtPcILaq/2E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_ffmpeg2410.dll" size="10535057">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IHpeei4v6Ffbo0/wBFtieH/kcbMO+qq5A21SVDMJBYY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_flann2410.dll" size="527360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1urKdAWByKQcRlkihXE7t2YpD5nFAmV2L3s1lqgbIdU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_gpu2410.dll" size="432128">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IJM+pirdyWUejxavm0urDZD5Qaw3AJpgnNx/4QjlI6Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_highgui2410.dll" size="2161152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TJILyDYm66X6SMRDdOLfQIvtr8rSqDbxg7WSSnk47H8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_imgproc2410.dll" size="1933312">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sDBE7oE1O54NCkwx35i7BkbDCU9UmDULLmZ4/5QDSSM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_imgproc2410d.dll" size="3425280">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GBGU1iSLAhq/eIZ3Ce2odL970WAztviqO2ddEWWDiRQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_legacy2410.dll" size="1263104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EsrseuiE5ffsAEWNzBZ/vk5ZeysRvmzBw/jcXEsyVaQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_ml2410.dll" size="510464">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aNT9Et41nNuBt3Z0nsjGMUOsADQkOJC4TTUI9MkXO2w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_nonfree2410.dll" size="562688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>28dyRQfR0fo7NV+BSuXeydjagdM1ADtfAjpkJJkldGo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_objdetect2410.dll" size="679936">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FP+rk/8kJ6rw7Dat97h5jw5qHnfTA6xLCSYp7T482zM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_ocl2410.dll" size="2136064">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>poUB/i2CYjiBkfhLp03JQHaZZCM0vX79r5gAuDzVMf8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_photo2410.dll" size="200704">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TzD2nY1GnmrDIlWOYt+/EsNUu5V6t9g+4lwxht5nCIo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_photo2410d.dll" size="491008">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zeitv/eNiFTPUiTw/eM6Fq4G0RpoFkzP6pIyk/eZ9Cc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_stitching2410.dll" size="1047040">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>j7zaatCq+k9GL10xO2CkzVLMNHJZMa0/3wu72LAE+9E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_superres2410.dll" size="619008">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4ZRJ1YC6b2grik2bC5NQuEOjOwdOw/YfknlR8FOXYNA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_video2410.dll" size="365056">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9Zr5fdbyMyMmBmR8KT963+nEVjki55FrleklLwAeEIw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\opencv_videostab2410.dll" size="553472">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aoD99LpRkn480ZDYKf9BXBw+N1/R3vAoOR31aZfSxlo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\x86\OpenCvSharpExtern.dll" size="872448">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>09vuv+PdWztTFgYV07TdGx/VB8y0i6xvnkyVnssi7kc=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>
