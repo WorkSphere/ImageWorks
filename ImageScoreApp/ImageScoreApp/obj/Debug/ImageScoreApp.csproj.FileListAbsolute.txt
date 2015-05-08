@@ -1,0 +1,4 @@
+C:\git_works\ImageScoreApp\ImageScoreApp\obj\Debug\ImageScoreApp.csprojResolveAssemblyReference.cache
+C:\git_works\ImageScoreApp\ImageScoreApp\obj\Debug\ImageScoreApp.ImageSelectScreen.resources
+C:\git_works\ImageScoreApp\ImageScoreApp\obj\Debug\ImageScoreApp.Properties.Resources.resources
+C:\git_works\ImageScoreApp\ImageScoreApp\obj\Debug\ImageScoreApp.csproj.GenerateResource.Cache

@@ -148,6 +148,7 @@
     <Compile Include="Analyze\AnalyzeManager.cs" />
     <Compile Include="Analyze\MovData.cs" />
     <Compile Include="Analyze\Program.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Analyze\ScData.cs" />
     <Compile Include="Analyze\Settings.cs" />

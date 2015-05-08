@@ -37,5 +37,8 @@ namespace ImageScoreApp
         // Hough変換でどれくらいの線分数が検出されるとコーミングノイズとして評点調整を行うかの閾値
         public static int LINE_NUMBER_THRESHOLD = Settings.Instance.Hough.lineThreshold;
 
+        // OpenCVを使用したメディアン処理後画像と元画像をの値の差分の閾値
+        public static int MEDIAN_COMP_THRESHOLD = 2;
+
     }
 }

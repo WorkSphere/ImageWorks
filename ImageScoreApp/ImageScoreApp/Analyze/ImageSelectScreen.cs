@@ -46,7 +46,6 @@ namespace ImageScoreApp
             InitializeComponent();
             movAna = new AnalyzeManager();
 
-
             // 画面初期化処理
             this.Analyze_Start_button.Enabled = false;      // 解析開始ボタン非活性
             this.CSV_button.Enabled = true;                // CSV出力場所選択ボタン
@@ -116,6 +115,8 @@ namespace ImageScoreApp
         private void button1_Click(object sender, EventArgs e)
         {
             try{
+                Logger.errorLog("ファイル選択ダイアログ表示でエラーが発生しました。", null);
+
                 FileProcessor selFileObj = new FileProcessor();
                 int ret;
 
@@ -136,9 +137,10 @@ namespace ImageScoreApp
                     chkScreen();
                 }
             }
-            catch(Exception)
+            catch(Exception ex)
             {
                 MessageBox.Show("ファイル選択ダイアログ表示でエラーが発生しました。", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.errorLog("ファイル選択ダイアログ表示でエラーが発生しました。", ex);
             }
         }
 
@@ -298,6 +300,13 @@ namespace ImageScoreApp
 
                 // 動画解析開始
                 ImgData igif = movAna.MovAnalyze();
+
+
+                // ★★★解析処理分析用処理 start★★★
+//                ImgData igif = movAna.Analyze_test();
+                // ★★★解析処理分析用処理 end  ★★★
+
+
                 if (igif == null)
                 {
                     MessageBox.Show("解析できませんでした。再起動してください。", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);

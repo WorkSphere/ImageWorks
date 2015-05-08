@@ -6,4 +6,10 @@
   <Hough>
     <lineThreshold>20</lineThreshold>
   </Hough>
+  <Log>
+    <LogLevel>3</LogLevel>
+    <LogPath>../Log</LogPath>
+    <LogFileSize>65535</LogFileSize> 
+    <LogRotate>3</LogRotate>
+  </Log>
 </Settings>

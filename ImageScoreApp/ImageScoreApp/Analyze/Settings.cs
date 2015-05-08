@@ -25,8 +25,9 @@ namespace ImageScoreApp
     public class Settings
     {
         // xml設定パラメータ
-        public Median Median = new Median();
-        public Hough Hough = new Hough();
+        public Median Median;
+        public Hough Hough;
+        public Log Log;
 
         //Settingsクラスのただ一つのインスタンス
         [NonSerialized()]
@@ -66,7 +67,7 @@ namespace ImageScoreApp
         //
         public static void LoadFromXmlFile()
         {
-            string path = GetSettingPath();
+            string path = "..\\settings.xml";
 
             StreamReader sr = new StreamReader(path, new UTF8Encoding(false));
             System.Xml.Serialization.XmlSerializer xs = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
@@ -87,7 +88,7 @@ namespace ImageScoreApp
         //
         public static void SaveToXmlFile()
         {
-            string path = GetSettingPath();
+            string path = "..\\settings.xml";
 
             StreamWriter sw = new StreamWriter(path, false);
             System.Xml.Serialization.XmlSerializer xs = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
@@ -95,13 +96,6 @@ namespace ImageScoreApp
             xs.Serialize(sw, Instance);
             sw.Close();
         }
-
-        public static string GetSettingPath()
-        {
-            string path = "..\\settings.xml";
-            return path;
-        }
-
     }
 
     // 機能 : Medianフィルタ関係XMLファイル保存用クラス
@@ -114,7 +108,7 @@ namespace ImageScoreApp
     //
     public class Median
     {
-        public  double Threshold;
+        public double Threshold;
     }
 
     // 機能 : Hough変換関係XMLファイル保存用クラス
@@ -129,4 +123,21 @@ namespace ImageScoreApp
     {
         public int lineThreshold;
     }
+
+    // 機能 : ログ設定値保存クラス
+    //
+    // 機能説明 : XMLファイルのログ設定値を保存する変数を定義する。
+    //
+    // 返り値 : なし
+    //
+    // 備考 : 
+    //
+    public class Log
+    {
+        public int LogLevel;
+        public string LogPath;
+        public UInt16 LogFileSize;
+        public UInt16 LogRotate;
+    }
+
 }

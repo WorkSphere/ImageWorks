@@ -209,7 +209,7 @@ namespace ImageScoreApp
             }
         }
 
-        #region OpenCVにてフィルタ後、元画像と比較し、ノイズを検出(画像解析高速化のための改善案(採用・不採用は未確))
+        #region OpenCVにてフィルタ後、元画像と比較し、ノイズを検出
         //
         // 機能 : OpenCVにてフィルタ後、元画像と比較し、ノイズを検出
         //
@@ -224,12 +224,12 @@ namespace ImageScoreApp
             try
             {
                 int cnt = 0;            // ノイズカウンタ
-                int threshold = 1;      // 元画像・メディアン後画像比較ノイズ検知閾値
+                double threshold = CommonDef.MEDIAN_COMP_THRESHOLD; // 元画像・メディアン後画像比較ノイズ検知閾値
 
                 Mat dst = img.Clone(); ;
 
                 // メディアンフィルタ実行
-                Cv2.MedianBlur(img, dst, 3);
+                Cv2.MedianBlur(img, dst, 3);    // 3×3のピクセルを見て平滑化
 
                 // 元画像と比較             
                 for(int y = 0; y < img.Rows; y++)
@@ -239,9 +239,9 @@ namespace ImageScoreApp
                         Vec3b srcRow = img.At<Vec3b>(y, x);
                         Vec3b dstRow = dst.At<Vec3b>(y, x);;
 
-                        if(Math.Abs(srcRow[0] - dstRow[0]) > threshold ||
-                           Math.Abs(srcRow[1] - dstRow[1]) > threshold ||
-                           Math.Abs(srcRow[2] - dstRow[2]) > threshold )
+                        if(Math.Abs(srcRow[0] - dstRow[0]) >= threshold ||
+                           Math.Abs(srcRow[1] - dstRow[1]) >= threshold ||
+                           Math.Abs(srcRow[2] - dstRow[2]) >= threshold )
                         {
                             cnt++;
                         }
@@ -258,6 +258,29 @@ namespace ImageScoreApp
             }
         }
         #endregion
+
+
+        //
+        // 機能 : 画像のSSIM算出
+        //
+        // 機能説明 : 画像のSSIMを算出する。
+        //
+        // 返り値 : 正常 指定ファイルのSSIM 異常 -1
+        //
+        // 備考 : 
+        //
+        public double AnaSSIM()
+        {
+            try
+            {
+
+                return xx;
+            }
+            catch(Exception ex)
+            {
+                return -1;
+            }
+        }
 
 
         #region メディアンフィルタ(ノイズ除去)
