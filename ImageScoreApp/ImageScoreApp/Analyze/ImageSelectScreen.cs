@@ -115,8 +115,6 @@ namespace ImageScoreApp
         private void button1_Click(object sender, EventArgs e)
         {
             try{
-                Logger.errorLog("ファイル選択ダイアログ表示でエラーが発生しました。", null);
-
                 FileProcessor selFileObj = new FileProcessor();
                 int ret;
 

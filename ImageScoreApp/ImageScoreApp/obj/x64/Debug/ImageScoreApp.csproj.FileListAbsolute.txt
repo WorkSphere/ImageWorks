@@ -117,3 +117,4 @@ C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Debug\ImageScoreApp.csproj.Gene
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Debug\ImageScoreApp.exe.manifest
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Debug\ImageScoreApp.application
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Debug\ImageScoreApp.pdb
+C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Debug\ImageScoreApp.csprojResolveAssemblyReference.cache

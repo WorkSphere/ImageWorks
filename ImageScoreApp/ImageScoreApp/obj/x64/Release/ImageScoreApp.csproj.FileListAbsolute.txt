@@ -110,14 +110,10 @@ C:\git_works\ImageScoreApp\ImageScoreApp\bin\x64\Release\ImageScoreApp.exe.manif
 C:\git_works\ImageScoreApp\ImageScoreApp\bin\x64\Release\ImageScoreApp.application
 C:\git_works\ImageScoreApp\ImageScoreApp\bin\x64\Release\ImageScoreApp.exe
 C:\git_works\ImageScoreApp\ImageScoreApp\bin\x64\Release\ImageScoreApp.pdb
-C:\git_works\ImageScoreApp\ImageScoreApp\bin\x64\Release\OpenCvSharp.xml
-C:\git_works\ImageScoreApp\ImageScoreApp\bin\x64\Release\OpenCvSharp.Blob.xml
-C:\git_works\ImageScoreApp\ImageScoreApp\bin\x64\Release\OpenCvSharp.CPlusPlus.xml
-C:\git_works\ImageScoreApp\ImageScoreApp\bin\x64\Release\OpenCvSharp.Extensions.xml
-C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Release\ImageScoreApp.csprojResolveAssemblyReference.cache
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Release\ImageScoreApp.ImageSelectScreen.resources
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Release\ImageScoreApp.Properties.Resources.resources
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Release\ImageScoreApp.csproj.GenerateResource.Cache
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Release\ImageScoreApp.exe.manifest
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Release\ImageScoreApp.application
 C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Release\ImageScoreApp.pdb
+C:\git_works\ImageScoreApp\ImageScoreApp\obj\x64\Release\ImageScoreApp.csprojResolveAssemblyReference.cache

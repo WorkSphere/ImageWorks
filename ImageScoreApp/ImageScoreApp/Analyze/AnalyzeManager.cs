@@ -133,11 +133,6 @@ namespace ImageScoreApp
                 {
                     IpImg = Cv.QueryFrame(_movData.movCapture);
 
-                    if (i == 0 && Convert.ToInt16(scData.anaIntervalTime) >= 1)
-                    {
-                        continue;
-                    }
-
                     if(i >= StartAnaFrame() && i <= EndAnaFrame() && IpImg != null )
                     {
                         int tmpNum = i - StartAnaFrame();
@@ -159,8 +154,8 @@ namespace ImageScoreApp
                             info.houghLineNum.Add((UInt16)ret);
 
                             // 画像解析を行う。
-                            rate = ImgAna.GetNoise(img);
-//                            rate = ImgAna.MedianCompSrc(img);
+//                            rate = ImgAna.GetNoise(img);
+                            rate = ImgAna.MedianCompSrc(img);
                             if (rate == CommonDef.RESULT_NG)
                             {
                                 throw new Exception();

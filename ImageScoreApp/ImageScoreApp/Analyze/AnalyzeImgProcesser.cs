@@ -260,27 +260,27 @@ namespace ImageScoreApp
         #endregion
 
 
-        //
-        // 機能 : 画像のSSIM算出
-        //
-        // 機能説明 : 画像のSSIMを算出する。
-        //
-        // 返り値 : 正常 指定ファイルのSSIM 異常 -1
-        //
-        // 備考 : 
-        //
-        public double AnaSSIM()
-        {
-            try
-            {
+        ////
+        //// 機能 : 画像のSSIM算出
+        ////
+        //// 機能説明 : 画像のSSIMを算出する。
+        ////
+        //// 返り値 : 正常 指定ファイルのSSIM 異常 -1
+        ////
+        //// 備考 : 
+        ////
+        //public double AnaSSIM()
+        //{
+        //    try
+        //    {
 
-                return xx;
-            }
-            catch(Exception ex)
-            {
-                return -1;
-            }
-        }
+        //        return xx;
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        return -1;
+        //    }
+        //}
 
 
         #region メディアンフィルタ(ノイズ除去)

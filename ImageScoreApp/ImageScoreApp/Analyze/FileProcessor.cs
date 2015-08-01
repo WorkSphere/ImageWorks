@@ -137,7 +137,7 @@ namespace ImageScoreApp
                 fileDialog.Title = "評価する動画を選択してください。";
 
                 // 拡張子フィルタをかける
-                fileDialog.Filter = "avi files (*.avi)|*.avi|mpeg files (*.mp4)|*.mp4";
+                fileDialog.Filter = "avi files (*.avi)|*.avi|mpeg files (*.mp4)|*.mp4 | すべてのファイル (*.*)|*.*";
 
                 if (fileDialog.ShowDialog() != DialogResult.OK)
                 {
