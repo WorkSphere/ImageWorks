@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ImageScoreApp.exe" size="35328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ImageScoreApp.exe" size="34304">
       <assemblyIdentity name="ImageScoreApp" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>V72BI+MfK1s7b7M4fkEBt5PX1kARWYerZYhIhR7TNu0=</dsig:DigestValue>
+        <dsig:DigestValue>OHi4iSZMaaxGQitRsCJJ8Cn8NReFwEToam+V4qGJcj4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

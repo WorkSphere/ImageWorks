@@ -171,7 +171,6 @@
             // 
             this.AnaInterval_TextBox.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.AnaInterval_TextBox.Location = new System.Drawing.Point(15, 257);
-            this.AnaInterval_TextBox.MaxLength = 2;
             this.AnaInterval_TextBox.Name = "AnaInterval_TextBox";
             this.AnaInterval_TextBox.Size = new System.Drawing.Size(30, 19);
             this.AnaInterval_TextBox.TabIndex = 17;

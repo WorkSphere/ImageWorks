@@ -299,12 +299,6 @@ namespace ImageScoreApp
                 // 動画解析開始
                 ImgData igif = movAna.MovAnalyze();
 
-
-                // ★★★解析処理分析用処理 start★★★
-//                ImgData igif = movAna.Analyze_test();
-                // ★★★解析処理分析用処理 end  ★★★
-
-
                 if (igif == null)
                 {
                     MessageBox.Show("解析できませんでした。再起動してください。", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -593,21 +587,9 @@ namespace ImageScoreApp
                 return;
             }
 
-            bool flg = true;
-            foreach (char c in this.AnaInterval_TextBox.Text)
+            double interval;
+            if (double.TryParse(this.AnaInterval_TextBox.Text, out interval))
             {
-                //数字以外の文字が含まれているか調べる
-                if (c < '0' || '9' < c)
-                {
-                    flg = false;
-                    break;
-                }
-            }
-
-            if (flg == true)
-            {
-                int interval = Convert.ToInt16(this.AnaInterval_TextBox.Text);
-
                 if (end - start < interval)
                 {
                     // 赤下線を引く

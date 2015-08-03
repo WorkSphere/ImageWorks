@@ -96,7 +96,6 @@ namespace ImageScoreApp
             try
             {
                 CvCapture capture = Cv.CreateFileCapture(movFileName);
-//                var capture = Cv2.CreateFrameSource_Video(movFileName);
 
                 MovData movInfo = new MovData();
                 movInfo.SetMoveInfo(capture);
@@ -135,11 +134,11 @@ namespace ImageScoreApp
 
                     if(i >= StartAnaFrame() && i <= EndAnaFrame() && IpImg != null )
                     {
+                        // 解析間隔ごとにフレームを解析
                         int tmpNum = i - StartAnaFrame();
-                        if (tmpNum % (Convert.ToInt16(scData.anaIntervalTime) * movData.movFPS) == 0 ||
-                            Convert.ToInt16(scData.anaIntervalTime) == 0)
+                        if (tmpNum % Convert.ToInt16(Convert.ToDouble(scData.anaIntervalTime) * movData.movFPS) == 0 || Convert.ToDouble(scData.anaIntervalTime) == 0)
                         { 
-                            img = Cv2.CvArrToMat(IpImg);
+                            img = Cv2.CvArrToMat(IpImg) ;
 
                             // 何フレーム目か格納(解析対象時間の)
                             info.frameOrder.Add((UInt16)i);
@@ -174,97 +173,6 @@ namespace ImageScoreApp
                 return null; ;
             }
         }
-
-
-        // 画像解析方法精度検討用
-        /**********************************************************************/
-        public ImgData Analyze_test()
-        {
-            try
-            {
-                AnalyzeImgProcesser ImgAna = new AnalyzeImgProcesser();
-                IplImage IpImg;
-
-                Mat img;
-                ImgData info = new ImgData();
-                int ret = 0;
-                float rate = 0;
-
-//                string dPath = "C:\\PDAS業務\\02_動画ダイレクト評価\\40_分析\\解析処理分析用データ\\FT04\\X03A_FT04_Far2_wChukei(3) (8-11-2014 7-37-00 PM)";
-//                string dPath = "C:\\PDAS業務\\02_動画ダイレクト評価\\40_分析\\解析処理分析用データ\\GT08\\X03A_GT08_Mono_Koyagi(1) (8-1-2014 8-25-54 PM)";
-//                string dPath = "C:\\PDAS業務\\02_動画ダイレクト評価\\40_分析\\解析処理分析用データ\\GT08\\X03A_GT08_Clover_Koyagi(2) (8-1-2014 8-28-43 PM)";
-//                string dPath = "C:\\PDAS業務\\02_動画ダイレクト評価\\40_分析\\解析処理分析用データ\\GT06\\0 (2014-07-14 18-40-13)";
-//                string dPath = "C:\\PDAS業務\\02_動画ダイレクト評価\\40_分析\\解析処理分析用データ\\GT06\\4 (7-14-2014 7-27-28 PM)";
-//                string dPath = "C:\\PDAS業務\\02_動画ダイレクト評価\\40_分析\\解析処理分析用データ\\GT06\\10 (7-14-2014 11-12-26 PM)";
-                string dPath = "C:\\PDAS業務\\02_動画ダイレクト評価\\40_分析\\解析処理分析用データ\\GT07\\X03A_GT07_higashi_1.7km_v (2014-07-25 19-03-32)";
-                
-                
-                
-                string[] imgArr = Directory.GetFiles(dPath, "*.jpg");
-
-                for(int i = 0; i < imgArr.Length; i++)
-                {
-                    IpImg = new IplImage(imgArr[i]);
-                    img = Cv2.CvArrToMat(IpImg);
-
-                    info.frameOrder.Add((UInt16)i);
-
-//                    // 画像のHough変換を行う。
-//                    ret = ImgAna.HoughCov(img);
-//                    if (ret < 0)
-//                    {
-//                        throw new Exception();
-//                    }
-//                    // 線分数を格納
-//                    info.houghLineNum.Add((UInt16)ret);
-                    info.houghLineNum.Add((UInt16)0);
-
-                    // 画像解析を行う。
-//                    rate = ImgAna.GetNoise(img);
-                    rate = ImgAna.MedianCompSrc(img);
-                    if (rate == CommonDef.RESULT_NG)
-                    {
-                        throw new Exception();
-                    }
-
-                    info.noiseRate.Add(rate);
-
-                    img.Dispose();
-                }
-                return info;
-
-            }
-            catch(Exception ex)
-            {
-                return null;
-            }
-        }
-        /**********************************************************************/
-
-
-
-
-        // 処理時間計測用
-        /**********************************************************************/
-        private Stopwatch stopWatch;
-        public void Start()
-        {
-            stopWatch = Stopwatch.StartNew();
-        }
-
-        public double ElapsedMilliSec()
-        {
-            stopWatch.Stop();
-            return (double)stopWatch.ElapsedMilliseconds;
-        }
-
-        public string Format()
-        {
-            return "StopWatch..{0}ms";
-        }
-        /**********************************************************************/
-
-
 
         //
         // 機能 : 解析時間開始フレームインデックス取得処理
